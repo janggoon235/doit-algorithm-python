@@ -8,15 +8,14 @@ def get_stack_cals(numbers: str):
 
     print(f'length of numbers: {len(number_list)}')
 
-    for i in number_list:
-        su = i
+    for su in number_list:
         if su >= num:  # 현재 수열값 >= 오름차순 자연수: 값이 같아질 때까지 append() 수행
             while su >= num:
                 stack.append(num)
                 num += 1
-                answer.append(f'+{su}')
+                answer.append('+')
             stack.pop()
-            answer.append(f'-{su}')
+            answer.append('-')
         else:  # 현재 수열값 < 오름차순 자연수:pop()을 수행해 수열 원소를 꺼냄
             n = stack.pop()
             # 스택의 가장 위의 수가 만들어야 하는 수열의 수보다 크면 수열을 출력할 수 없음
@@ -24,7 +23,7 @@ def get_stack_cals(numbers: str):
                 answer = 'No'
                 break
             else:
-                answer.append(f'-{su}')
+                answer.append('-')
 
     return answer
 
