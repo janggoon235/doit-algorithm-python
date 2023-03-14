@@ -2,16 +2,18 @@
 
 # 1. input으로 입력값 받음
 # 2. 리스트로 변환
-# 3. 각각 정수로 변환 하면서 더하기
+# 3. 하나씩 더하기
 
-# 갯수를 받는 것은 의미 없음..
-# n = input()
+def get_sum(numbers: str):
+    number_list = [int(num) for num in numbers]
+    sum_numbers = 0
 
-print('더할 수를 나열하여 입력해주세요')
-numbers = list(input())
-sum_numbers = 0
+    for num in number_list:
+        sum_numbers += num
 
-for i in numbers:
-    sum_numbers += int(i)
+    return sum_numbers
 
-print(sum_numbers)
+
+print(get_sum('54321'))
+print(get_sum('70000000000000000000'))
+print(get_sum('10987654321'))

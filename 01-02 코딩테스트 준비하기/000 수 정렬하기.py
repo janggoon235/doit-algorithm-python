@@ -1,6 +1,5 @@
 ### N개의 수가 주어졌을 때 이를 오름차순 정렬하는 프로그램으로 작성하라
 ## 제한시간 2초
-import datetime
 import time
 
 
